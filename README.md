@@ -20,7 +20,17 @@ Ensure you have the following installed:
 
 - **Python 3.8+**
 - **pip (Python Package Manager)**
-- **SearchSploit (Exploit-DB CLI)**:
+- **SearchSploit (Exploit-DB CLI)**
+- [**wappalyzer 1.0.11**](https://pypi.org/project/wappalyzer/)
+- **Openai API key**
+
+```sh
+echo 'export OPENAI_API_KEY="your-openai-api-key"' >> ~/.bashrc
+source ~/.bashrc
+
+```
+
+
 
 Tested only with **dog** machine from HTB
 
