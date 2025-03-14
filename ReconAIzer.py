@@ -1,6 +1,8 @@
 import os
 import json
+import requests
 import subprocess
+import pandas as pd
 from wappalyzer import analyze
 from openai import OpenAI
 
@@ -16,7 +18,7 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 def get_technologies(url: str):
     """Analyze website technologies using Wappalyzer with balanced scan type."""
     results = analyze(url, scan_type='balanced')
-    return list(results.get(url, {}).keys())  # Extract only technology names
+    return list(results.get(url, {}).keys()) 
 
 
 def get_exploits_searchsploit(technologies: list):
@@ -61,7 +63,7 @@ def determine_exploitable_technologies_with_ai(technologies, exploits):
 
 def display_exploit_summary(technologies, exploits):
     """Print a concise summary of detected technologies and exploitability."""
-    print("\nhttp://dog/htb Technologies Detected:")
+    print("\n Technologies Detected:")
     for tech in technologies:
         print(f"- {tech}")
     
