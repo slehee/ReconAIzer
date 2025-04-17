@@ -4,3 +4,4 @@ requests
 pandas
 json
 subprocess
+selenium>=4.15.1 # not directly required, pinned by Snyk to avoid a vulnerability
